@@ -9,6 +9,7 @@ import { FooterComponent } from './core/footer/footer.component';
 import { HomeComponent } from './modules/home/home.component';
 import { ClientesComponent } from './modules/cadastros/clientes/clientes.component';
 import { RecursosComponent } from './modules/cadastros/recursos/recursos.component';
+import { OrdensComponent } from './modules/cadastros/ordens/ordens.component';
 import { PlanejamentoComponent } from './modules/planejamento/planejamento.component';
 import { AboutComponent } from './modules/about/about.component';
 import { routing } from './app.routing';
@@ -22,7 +23,8 @@ import { routing } from './app.routing';
     ClientesComponent,
     RecursosComponent,
     PlanejamentoComponent,
-    AboutComponent
+    AboutComponent,
+    OrdensComponent
   ],
   imports: [
     BrowserModule,
