@@ -11,6 +11,7 @@ import { AboutComponent } from './modules/about/about.component';
 const APP_ROUTES: Routes = [
     { path: 'cadastros/recursos', component: RecursosComponent},
     { path: 'cadastros/clientes', component: ClientesComponent},
+    { path: 'cadastros/clientes/:id', component: ClientesComponent},
     { path: 'cadastros/ordens', component: OrdensComponent},
     { path: 'planejamento', component: PlanejamentoComponent },
     { path: 'about', component: AboutComponent },
