@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { ClientesService } from './clientes.service';
 
 @Component({
   selector: 'app-clientes',
@@ -9,21 +10,12 @@ import { Subscription } from 'rxjs';
 })
 export class ClientesComponent implements OnInit {
 
-  id: number;
-  inscricao: Subscription;
+  clientes: any[];
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private clientesService: ClientesService) { }
 
   ngOnInit() {
-    // exemplo de código para obter um parametro
-    this.inscricao = this.route.params.subscribe((params: any) => {
-      this.id = +params['id'];
-      console.log(this.id);
-    })
+    this.clientes = this.clientesService.getClientes();
   }
-
-  ngOnDestroy() {
-    this.inscricao.unsubscribe();
-  }
-
+  
 }
