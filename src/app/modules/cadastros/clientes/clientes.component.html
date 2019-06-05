@@ -9,3 +9,10 @@
     {{ cliente.nome }}
   </a>
 </div>
+
+<p>Exibindo registros à partir do {{ inicio }}</p>
+
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary" (click)="paginar(-1)" [disabled]="inicio==0">&laquo; Anterior</button>
+  <button type="button" class="btn btn-secondary" (click)="paginar(+1)">Próximo  &raquo;</button>
+</div>
