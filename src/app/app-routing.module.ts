@@ -5,8 +5,12 @@ import { AboutComponent } from './modules/about/about.component';
 import { HomeComponent } from './modules/home/home.component';
 
 const routes: Routes = [
+  { path: 'cadastro/cliente', loadChildren: './modules/cadastro/cliente/cliente.module#ClienteModule' },
+  { path: 'cadastro/ordem', loadChildren: './modules/cadastro/ordem/ordem.module#OrdemModule' },
+  { path: 'cadastro/recurso', loadChildren: './modules/cadastro/recurso/recurso.module#RecursoModule' },
+  { path: 'cadastros/clientes', loadChildren: './modules/cadastros/clientes/clientes.module#ClientesModule' },
   { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent }
+  { path: 'about', component: AboutComponent },
 ];
 
 @NgModule({

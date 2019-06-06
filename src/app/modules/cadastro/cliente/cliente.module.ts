@@ -3,14 +3,20 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { ClienteRoutingModule } from './cliente-routing.module';
-import { ClientesService } from '../../cadastros/clientes/clientes.service';
+import { ClienteService } from './cliente.service';
 import { ClienteListaComponent } from './cliente-lista/cliente-lista.component';
 import { ClienteFormularioComponent } from './cliente-formulario/cliente-formulario.component';
 import { ClienteDetalheComponent } from './cliente-detalhe/cliente-detalhe.component';
 
 @NgModule({
-  providers: [ClientesService],
-  declarations: [ClienteListaComponent, ClienteFormularioComponent, ClienteDetalheComponent],
+  declarations: [
+    ClienteListaComponent, 
+    ClienteFormularioComponent, 
+    ClienteDetalheComponent
+  ],
+  providers: [
+    ClienteService
+  ],
   imports: [
     CommonModule,
     FormsModule,

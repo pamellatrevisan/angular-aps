@@ -13,10 +13,10 @@ const routes: Routes = [
     {path: ':id/editar', component: RecursoFormularioComponent},
   ]},
   */
-  {path: 'cadastro/recurso', component: RecursoListaComponent},
-  {path: 'cadastro/recurso/novo', component: RecursoFormularioComponent},
-  {path: 'cadastro/recurso/:id', component: RecursoDetalheComponent},
-  {path: 'cadastro/recurso/:id/editar', component: RecursoFormularioComponent},
+  {path: '', component: RecursoListaComponent},
+  {path: 'novo', component: RecursoFormularioComponent},
+  {path: ':id', component: RecursoDetalheComponent},
+  {path: ':id/editar', component: RecursoFormularioComponent},
 ];
 
 @NgModule({

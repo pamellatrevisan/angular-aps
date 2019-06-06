@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-
-import { ClienteService } from '../cliente.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+
+import { ClienteService } from '../cliente.service';
 
 @Component({
   selector: 'app-cliente-detalhe',
