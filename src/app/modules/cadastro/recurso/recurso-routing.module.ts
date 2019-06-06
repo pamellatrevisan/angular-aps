@@ -6,11 +6,17 @@ import { RecursoFormularioComponent } from './recurso-formulario/recurso-formula
 import { RecursoDetalheComponent } from './recurso-detalhe/recurso-detalhe.component';
 
 const routes: Routes = [
+  /* decidir se será child route
   {path: 'cadastro/recurso', component: RecursoListaComponent, children: [
     {path: 'novo', component: RecursoFormularioComponent},
     {path: ':id', component: RecursoDetalheComponent},
     {path: ':id/editar', component: RecursoFormularioComponent},
   ]},
+  */
+  {path: 'cadastro/recurso', component: RecursoListaComponent},
+  {path: 'cadastro/recurso/novo', component: RecursoFormularioComponent},
+  {path: 'cadastro/recurso/:id', component: RecursoDetalheComponent},
+  {path: 'cadastro/recurso/:id/editar', component: RecursoFormularioComponent},
 ];
 
 @NgModule({

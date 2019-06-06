@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { RecursoService } from '../recurso.service';
+
 @Component({
   selector: 'app-recurso-lista',
   templateUrl: './recurso-lista.component.html',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecursoListaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private recursoService: RecursoService) { }
 
   ngOnInit() {
   }

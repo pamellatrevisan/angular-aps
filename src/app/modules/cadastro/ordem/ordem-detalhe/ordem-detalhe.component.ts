@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { OrdemService } from '../ordem.service';
+
 @Component({
   selector: 'app-ordem-detalhe',
   templateUrl: './ordem-detalhe.component.html',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdemDetalheComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ordemService: OrdemService) { }
 
   ngOnInit() {
   }

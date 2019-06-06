@@ -1,3 +1,6 @@
-<p>
-  cliente-detalhe works!
-</p>
+<h5>Detalhe do Cliente</h5>
+
+<p>ID: {{ cliente?.id }}</p>
+<p>Nome: {{cliente?.nome}}</p>
+
+<button type="button" class="btn btn-secondary" (click)="editarCliente()" [disabled]="cliente == null">Editar</button>

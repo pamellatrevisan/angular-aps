@@ -1,4 +1,12 @@
-<p>
-  cliente-lista works!
-</p>
-<router-outlet></router-outlet>
+<h5>Lista de Clientes</h5>
+<div class="list-group">
+  <div class="list-group-item list-group-item-action active">
+    Nome
+  </div>
+    <a class="list-group-item list-group-item-action"
+      *ngFor="let cliente of clientes"
+      [routerLink]="['/cadastro/cliente', cliente.id]">
+     {{ cliente.nome }}
+    </a>
+</div>
+<!-- <router-outlet></router-outlet> -->

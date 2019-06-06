@@ -6,11 +6,17 @@ import { OrdemFormularioComponent } from './ordem-formulario/ordem-formulario.co
 import { OrdemDetalheComponent } from './ordem-detalhe/ordem-detalhe.component';
 
 const routes: Routes = [
+  /* decidir se será child route
   {path: 'cadastro/ordem', component: OrdemListaComponent, children: [
     {path: 'novo', component: OrdemFormularioComponent},
     {path: ':id', component: OrdemDetalheComponent},
     {path: ':id/editar', component: OrdemFormularioComponent},
   ]},
+  */
+  {path: 'cadastro/ordem', component: OrdemListaComponent},
+  {path: 'cadastro/ordem/novo', component: OrdemFormularioComponent},
+  {path: 'cadastro/ordem/:id', component: OrdemDetalheComponent},
+  {path: 'cadastro/ordem/:id/editar', component: OrdemFormularioComponent},
 ];
 
 @NgModule({

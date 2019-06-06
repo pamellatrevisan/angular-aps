@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ClienteService } from '../cliente.service';
+import { Subscription } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
+
 @Component({
   selector: 'app-cliente-formulario',
   templateUrl: './cliente-formulario.component.html',
@@ -7,9 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteFormularioComponent implements OnInit {
 
-  constructor() { }
+  private inscricao: Subscription;
+  private id: number;
+  private cliente: any;
+
+  constructor(
+    private route: ActivatedRoute,
+    private clienteService: ClienteService) { }
 
   ngOnInit() {
+    this.inscricao = this.route.params.subscribe((params: any) => {
+      this.id = +params['id'];
+      this.cliente = this.clienteService.obterPorId(this.id);
+      console.log(this.cliente);
+    })
+  }
+
+  ngOnDestroy() {
+    this.inscricao.unsubscribe();
   }
 
 }
