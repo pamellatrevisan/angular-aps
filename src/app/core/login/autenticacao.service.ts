@@ -14,15 +14,16 @@ export class AutenticacaoService {
 
   constructor(private router: Router) { }
 
-  autenticar(usuario: Usuario) {
-    if (usuario.login == 'usuario@email.com' && 
-    usuario.senha == '123456') {
-      this.usuarioAutenticado = false;
-      this.validarAutenticacao.emit(true);
+  efetuarLogin(usuario: Usuario) {
+    this.usuarioAutenticado = (usuario.login == 'usuario@email.com' && usuario.senha == '123456');
+    this.validarAutenticacao.emit(this.usuarioAutenticado);
+
+    if (this.usuarioAutenticado) {
       this.router.navigate(['/']);
-    } else {
-      this.usuarioAutenticado = false;
-      this.validarAutenticacao.emit(false);
     }
+  }
+
+  usuarioEstaAutenticado() {
+    return this.usuarioAutenticado;
   }
 }
